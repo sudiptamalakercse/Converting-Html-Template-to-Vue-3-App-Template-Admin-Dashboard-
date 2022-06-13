@@ -1120,15 +1120,17 @@
 </template>
 
 <script>
-import useBreadcrumb from '../../composables/breadcrumb_composable';
+import useBreadcrumbAndTitle from '../../composables/breadcrumb_and_title_composable';
 
 export default {
 	name: 'IndexComponent',
 	setup() {
-		const { cheange_breadcrumb_links, cheange_breadcrumb_heading } =
-			useBreadcrumb();
+		const {
+			cheange_breadcrumb_links,
+			cheange_breadcrumb_heading_and_title_heading
+		} = useBreadcrumbAndTitle();
 
-		cheange_breadcrumb_heading('Dashboard');
+		cheange_breadcrumb_heading_and_title_heading('Dashboard');
 
 		cheange_breadcrumb_links([
 			{ name: 'Home', name_of_route: 'home', disabled: true }

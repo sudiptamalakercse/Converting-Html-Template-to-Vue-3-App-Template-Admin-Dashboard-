@@ -26,12 +26,12 @@
 </template>
 
 <script>
-import useBreadcrumb from '../../composables/breadcrumb_composable';
+import useBreadcrumbAndTitle from '../../composables/breadcrumb_and_title_composable';
 
 export default {
 	name: 'PageBreadcrumbComponent',
 	setup() {
-		const { bread_crumb_links, bread_crumb_heading } = useBreadcrumb();
+		const { bread_crumb_links, bread_crumb_heading } = useBreadcrumbAndTitle();
 
 		return {
 			bread_crumb_links,
