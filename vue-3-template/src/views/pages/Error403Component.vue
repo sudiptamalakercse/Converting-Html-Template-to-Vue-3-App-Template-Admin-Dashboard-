@@ -21,7 +21,10 @@ import useBreadcrumb from '../../composables/breadcrumb_composable';
 export default {
 	name: 'Error403Component',
 	setup() {
-		const { cheange_breadcrumb_links } = useBreadcrumb();
+		const { cheange_breadcrumb_links, cheange_breadcrumb_heading } =
+			useBreadcrumb();
+
+		cheange_breadcrumb_heading('Error 403');
 
 		cheange_breadcrumb_links([
 			{ name: 'Home', name_of_route: 'home', disabled: false },

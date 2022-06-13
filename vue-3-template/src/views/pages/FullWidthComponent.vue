@@ -177,7 +177,10 @@ import useBreadcrumb from '../../composables/breadcrumb_composable';
 export default {
 	name: 'FullWidthComponent',
 	setup() {
-		const { cheange_breadcrumb_links } = useBreadcrumb();
+		const { cheange_breadcrumb_links, cheange_breadcrumb_heading } =
+			useBreadcrumb();
+
+		cheange_breadcrumb_heading('Full Width');
 
 		cheange_breadcrumb_links([
 			{ name: 'Home', name_of_route: 'home', disabled: false },

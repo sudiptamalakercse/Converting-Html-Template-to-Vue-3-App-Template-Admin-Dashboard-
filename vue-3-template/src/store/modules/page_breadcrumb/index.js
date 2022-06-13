@@ -5,7 +5,8 @@ export default {
 	namespaced: true,
 	state() {
 		return {
-			bread_crumb_links: []
+			bread_crumb_links: [],
+			bread_crumb_heading: ''
 		};
 	},
 	mutations,

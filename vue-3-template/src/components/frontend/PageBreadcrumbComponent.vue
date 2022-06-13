@@ -2,7 +2,7 @@
 	<div class="page-breadcrumb">
 		<div class="row">
 			<div class="col-12 d-flex no-block align-items-center">
-				<h4 class="page-title">Dashboard</h4>
+				<h4 class="page-title">{{ bread_crumb_heading }}</h4>
 				<div class="ms-auto text-end">
 					<nav aria-label="breadcrumb">
 						<ol class="breadcrumb">
@@ -31,10 +31,11 @@ import useBreadcrumb from '../../composables/breadcrumb_composable';
 export default {
 	name: 'PageBreadcrumbComponent',
 	setup() {
-		const { bread_crumb_links } = useBreadcrumb();
+		const { bread_crumb_links, bread_crumb_heading } = useBreadcrumb();
 
 		return {
-			bread_crumb_links
+			bread_crumb_links,
+			bread_crumb_heading
 		};
 	}
 };
